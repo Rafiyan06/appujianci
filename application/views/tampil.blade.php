@@ -36,7 +36,12 @@
     <div class="row g-5">
       <div class="col-md-6">
         <h2 class="text-body-emphasis">Tampil Input Data</h2>
-        <p>Nama : </p>
+        <p>
+          Nama   : 
+          Nim    :
+          Umur   :
+          Status :
+        </p>
       </div>
     </div>
   </main>
