@@ -33,4 +33,27 @@ class Welcome extends CI_Controller
         $blade = new Blade(VIEWPATH, APPPATH . 'cache');
         echo $blade->make('tampil', ['nama' => $nama])->render();
     }
+    if($this->input->post()) {
+        $name = $this->input->post('nama');
+        $nim = $this->input->post('nim');
+        $umur = $this->input->post('umur');
+
+        if($umur < 10) {
+            $age = "Anak";
+        } else if ($umur < 20 && $umur > 10) {
+            $age = "Remaja";
+        } else if($umur > 20 && $umur < 30) {
+            $age = "Dewasa";
+        } else {
+            $age = "Tua";
+        }
+    }
+
+    $nama = $name;
+    $nim = $nim;
+    $umur = $age;
+    $blade = new Blade(VIEWPATH, APPPATH . 'cache');
+    echo $blade->make('tampil', ['nama' => $nama, 'nim' => $nim, 'umur' => $umur])->render();
 }
+}
+
